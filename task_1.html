@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Fundamentals</title>
+    <style>
+        /* CSS Styling */
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #4a86e8;
+            border-radius: 8px;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #2c5aa0;
+            border-bottom: 2px solid #4a86e8;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        
+        .content-section {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+        }
+        
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: block;
+            border: 2px solid #4a86e8;
+        }
+        
+        a {
+            color: #e85a4f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        button {
+            background-color: #e85a4f;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #d0493e;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HTML Structure -->
+    <header>
+        <h1>Web Development Fundamentals</h1>
+        <p>Learning HTML, CSS, and JavaScript Basics</p>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h2>About HTML</h2>
+            <p>HTML (HyperText Markup Language) is the foundation of all websites. It provides the basic structure of pages, which is then enhanced and modified by other technologies like CSS and JavaScript.</p>
+
+            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="HTML code on a screen">
+
+            <p>Key HTML elements include:</p>
+            <ul>
+                <li>Headings (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>)</li>
+                <li>Paragraphs (<code>&lt;p&gt;</code>)</li>
+                <li>Links (<code>&lt;a&gt;</code>)</li>
+                <li>Images (<code>&lt;img&gt;</code>)</li>
+                <li>Containers (<code>&lt;div&gt;</code>, <code>&lt;section&gt;</code>)</li>
+            </ul>
+
+            <p>Learn more about HTML at
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs</a>.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2>CSS Styling</h2>
+            <p>CSS (Cascading Style Sheets) is used for styling and layout of web pages. It controls colors, fonts, spacing, and responsive design.</p>
+
+            <p>CSS concepts demonstrated on this page:</p>
+            <ul>
+                <li>Background colors and gradients</li>
+                <li>Typography and font families</li>
+                <li>Box model (margins, padding, borders)</li>
+                <li>Flexible layouts and responsive design</li>
+                <li>Hover effects and transitions</li>
+            </ul>
+        </section>
+
+        <div class="button-container">
+            <button id="interactBtn">Click for JavaScript Demo</button>
+        </div>
+
+        <section class="content-section">
+            <h2>JavaScript Interactivity</h2>
+            <p>JavaScript makes web pages dynamic and interactive. It can manipulate content, respond to user events, and communicate with servers.</p>
+
+            <p>Try the button above to see a basic JavaScript interaction. More complex JavaScript can:</p>
+            <ul>
+                <li>Update content dynamically</li>
+                <li>Validate form inputs</li>
+                <li>Create animations</li>
+                <li>Fetch data from APIs</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created as part of learning web development fundamentals | &copy; 2023</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // JavaScript functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.getElementById('interactBtn');
+
+            button.addEventListener('click', () => {
+                // Show alert message
+                alert('Great job! This alert is powered by JavaScript.');
+
+                // Bonus: Change button text temporarily
+                const originalText = button.textContent;
+                button.textContent = 'Clicked!';
+
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+
+</html>
